@@ -1,0 +1,91 @@
+@import "../../Responsive/Responsive.scss";
+
+.main {
+  background-image: url(../../assets/Images/MainImage.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  $numOfSlides: 4;
+  .textsContainer {
+    position: relative;
+    margin-top: 100px;
+    width: 60%;
+
+    @include responsive768px {
+      margin-top: 150px;
+    }
+    h1 {
+      font-size: 100px;
+      color: rgba(110, 126, 153, 0.681);
+      font-weight: bold;
+
+      @include responsive768px {
+        font-size: 128px;
+      }
+    }
+    p:nth-child(2) {
+      font-size: 24px;
+      color: #414f6b;
+      font-weight: bold;
+      position: absolute;
+      top: 52px;
+      left: 116px;
+      @include responsive768px {
+        top: 67px;
+        left: 148px;
+        font-size: 32px;
+      }
+    }
+    p:last-child {
+      padding-left: 10px;
+      color: #212529;
+
+      @include responsive768px {
+        padding-left: 80px;
+      }
+    }
+  }
+  .carouselContainer {
+    width: 100%;
+    background-color: #414f6bc1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    .imagesContainer {
+      display: flex;
+      max-width: 910px;
+      gap: 10px;
+      overflow: hidden;
+      .imagesElement {
+        display: flex;
+        gap: 10px;
+        transition: transform 0.5s ease;
+        img {
+          width: calc(100% / $numOfSlides);
+        }
+      }
+    }
+    .buttonsContainer {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      button {
+        padding: 4px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.679);
+        &.activeButton {
+          background-color: white;
+        }
+      }
+    }
+  }
+}

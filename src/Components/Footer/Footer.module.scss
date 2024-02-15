@@ -1,0 +1,184 @@
+@import "../../Responsive/Responsive.scss";
+
+footer {
+  .footerElement {
+    background-image: url(../../assets/Images/FooterImage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .headerPart {
+      width: 100%;
+      .headerElement {
+        background-color: white;
+        .upTexts {
+          width: 60%;
+          margin: auto;
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 20px;
+          @include responsive768px {
+            gap: 100px;
+            flex-direction: unset;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0px;
+          }
+          @include responsive992px {
+            gap: 170px;
+          }
+          li:first-child {
+            position: relative;
+            h2 {
+              font-size: 100px;
+              color: rgba(87, 83, 83, 0.467);
+              font-weight: bold;
+              @include responsive768px {
+                font-size: 128px;
+              }
+            }
+            p {
+              position: absolute;
+              font-size: 24px;
+              color: #414f6b;
+              font-weight: bold;
+              top: 52px;
+              left: 116px;
+              @include responsive768px {
+                top: 67px;
+                left: 148px;
+                font-size: 32px;
+              }
+            }
+          }
+          li:last-child {
+            p {
+              min-width: 200px;
+              color: #212529;
+              @include responsive992px {
+                width: unset;
+              }
+            }
+          }
+        }
+        .mountainsPart {
+          width: 100%;
+          background-color: #414f6b;
+          display: none;
+          @include responsive768px {
+            display: block;
+          }
+          .onclickPart {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            list-style: none;
+            @include responsive768px {
+              width: 60%;
+            }
+            p {
+              font-size: 16px;
+              padding: 20px;
+              cursor: pointer;
+              color: #b0b4be;
+              @include responsive768px {
+                font-size: 20px;
+              }
+            }
+            .active {
+              background-color: rgba(255, 255, 255, 0.507);
+              color: #414f6b;
+              text-decoration: underline;
+              cursor: pointer;
+              padding: 20px;
+              font-size: 16px;
+              font-weight: bold;
+              @include responsive768px {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+      .activeMountainPart {
+        width: 60%;
+        margin-top: 100px;
+        display: none;
+        @include responsive768px {
+          display: flex;
+          justify-content: center;
+        }
+        .activeMountain {
+          width: 320px;
+          background-color: rgba(255, 255, 255, 0.65);
+          padding: 20px;
+          .scheduleText {
+            color: #414f6b;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+          ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            li {
+              p {
+                color: rgba(0, 0, 0, 0.526);
+                &:first-child {
+                  margin-bottom: 5px;
+                }
+                &:nth-child(3) {
+                  margin: 20px 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .footerPart {
+      width: 100%;
+      background-color: #414f6b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+      div {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        @include responsive768px {
+          width: 60%;
+          gap: 0px;
+        }
+        ul:first-child {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          li {
+            font-weight: bold;
+            p {
+              color: #4e6ea6;
+              font-size: 18px;
+            }
+          }
+        }
+        p:last-child {
+          color: #4e6ea6;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

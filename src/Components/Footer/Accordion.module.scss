@@ -1,0 +1,73 @@
+@import "../../Responsive/Responsive.scss";
+
+.accordionContainer {
+  width: 100%;
+  @include responsive768px {
+    display: none;
+  }
+  .onclickPart {
+    width: 100%;
+    .firstPart {
+      width: 100%;
+      border-bottom: 1px solid #2b3345;
+      .mountainButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        background-color: #414f6b;
+        padding: 10px 0;
+        p {
+          font-size: 24px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        img {
+          width: 20px;
+          height: 20px;
+          transform: rotate(0deg);
+          transition: transform 0.5s ease;
+        }
+        .activeImg {
+          transform: rotate(180deg);
+        }
+      }
+      .activeMountain {
+        width: 100%;
+        background-color: transparent;
+        .active {
+          width: 250px;
+          margin: auto;
+          background-color: rgba(255, 255, 255, 0.65);
+          .scheduleText {
+            color: #414f6b;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding-top: 20px;
+          }
+          ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            li {
+              p {
+                color: rgba(0, 0, 0, 0.526);
+                &:first-child {
+                  margin-bottom: 5px;
+                }
+                &:nth-child(3) {
+                  margin: 20px 0;
+                }
+                &:last-child {
+                  margin-bottom: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

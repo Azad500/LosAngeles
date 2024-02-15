@@ -1,0 +1,10 @@
+@mixin responsive768px {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin responsive992px {
+  @media (min-width: 992px) {
+    @content;
+  }
+}

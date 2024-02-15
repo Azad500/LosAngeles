@@ -1,0 +1,80 @@
+@import "../../Responsive/Responsive.scss";
+
+nav {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../../assets/Images/NavbarSmallImage.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  @include responsive768px {
+    background-image: url(../../assets/Images/NavbarLargeImage.png);
+  }
+  .navbarElement,
+  .navbarElementScrolled {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    @include responsive768px {
+      padding: 10px 200px;
+    }
+    .logoPart {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .headerTexts {
+        display: none;
+        color: #4e6ea6;
+        font-size: 16px;
+        font-weight: bold;
+        @include responsive768px {
+          font-size: 20px;
+        }
+      }
+      .showHeaderTexts {
+        display: block;
+      }
+      .hideHeaderTexts {
+        display: none;
+      }
+    }
+    .texts {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      @include responsive768px {
+        flex-direction: unset;
+        gap: 30px;
+      }
+      p {
+        color: white;
+        border-bottom: 3px solid white;
+        font-style: italic;
+        line-height: 1.5;
+        font-weight: bold;
+        cursor: pointer;
+        text-transform: uppercase;
+        &:hover {
+          border-bottom: none;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+  .navbarElementScrolled {
+    background-color: rgba(255, 255, 255, 0.639);
+
+    .texts {
+      p {
+        color: #414f6b;
+        border-bottom: 3px solid #414f6b;
+      }
+    }
+  }
+}
